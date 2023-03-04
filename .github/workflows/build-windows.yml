@@ -1,0 +1,60 @@
+# This is a basic workflow to help you get started with Actions
+
+name: build-windows
+
+# Controls when the workflow will run
+on:
+  # this is a called workflow
+  workflow_call:
+    outputs:
+      build-file:
+        description: "The output of this build procsss"
+        value: ${{ jobs.windows-build-job.outputs.install-file }}
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # Build the installer on mac
+  windows-build-job:
+    # The type of runner that the job will run on
+    runs-on: windows-latest
+    
+    # Output
+    outputs:
+      install-file: ${{ steps.output-installer.outputs.filename }}
+      
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      # Setup python
+      - name: System Setup
+        run: |
+          pip3 install pyinstaller pyqt5 darkdetect pyserial
+        
+      # Build the installer
+      - name: Build Windows Installer
+        run: |
+          pyinstaller --onefile --clean --name SwarmM138GUI --noconsole --distpath=. --icon=Swarm_M138_GUI\resource\sfe_logo_med.ico --add-binary="Swarm_M138_GUI\resource\sfe_logo_med.png;." --add-data="Swarm_M138_GUI\resource\*;resource\" Swarm_M138.py
+                    
+      - name: Compress Installer
+        shell: powershell
+        run: |
+          $compress = @{
+            Path = ".\SwarmM138GUI.exe"
+            CompressionLevel = "Fastest"
+            DestinationPath = ".\SwarmM138GUI.win.zip"
+            }
+          Compress-Archive @compress
+        
+      - uses: actions/upload-artifact@v3
+        with:
+          name: SwarmM138GUI.win.zip
+          path: SwarmM138GUI.win.zip
+          
+      # Use Windows powershell notation: $env:GITHUB_OUTPUT
+      - id: output-installer
+        run: echo "filename=SwarmM138GUI.win.zip" >> $env:GITHUB_OUTPUT
