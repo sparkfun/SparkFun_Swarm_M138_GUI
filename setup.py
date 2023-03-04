@@ -120,7 +120,7 @@ setuptools.setup(
     # "scripts" keyword. Entry points provide cross-platform support and allow
     # pip to create the appropriate form of executable for the target platform.
     entry_points={
-        'console_scripts': ['Swarm_M138=Swarm_M138_GUI:startUploaderGUI',
+        'console_scripts': ['Swarm_M138=Swarm_M138_GUI:startGUI',
         ],
     },
 )
