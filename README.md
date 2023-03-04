@@ -61,7 +61,7 @@ To launch the GUI:
 The GUI is also provided as an installable Python package. This is advantageous for platforms that lack a pre-compiled application. 
 
 To install the Python package:
-* Download the package file - *SwarmM138GUI-2.0.0.tar.gz* (note - the version number might vary)
+* Download the [package file](https://github.com/sparkfun/SparkFun_Swarm_M138_GUI/releases) - *SwarmM138GUI-2.0.0.tar.gz* (note - the version number might vary)
 
 At a command line - issue the package install command:
 
