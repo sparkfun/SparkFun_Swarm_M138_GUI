@@ -61,8 +61,7 @@ To launch the GUI:
 The GUI is also provided as an installable Python package. This is advantageous for platforms that lack a pre-compiled application. 
 
 To install the Python package:
-* Download the package file - *python-install-package.zip*
-* Unzip the github release file. This results in the installable Python package file - *SwarmM138GUI-2.0.0.tar.gz* (note - the version number might vary)
+* Download the package file - *SwarmM138GUI-2.0.0.tar.gz* (note - the version number might vary)
 
 At a command line - issue the package install command:
 
@@ -79,6 +78,6 @@ We've tested the GUI on 64-bit Raspberry Pi Debian. You will need to use the **P
 
 Notes:
 * On 32-bit Raspberry Pi, with both Python 2 and Python 3 installed, use `sudo pip3 install SwarmM138GUI-2.0.0.tar.gz`
-  * By default, the executable will be placed in `/usr/local/bin`
 * On 64-bit Raspberry Pi, use `sudo pip install SwarmM138GUI-2.0.0.tar.gz`
+* By default, the executable will be placed in `/usr/local/bin`
 * The `sudo` is required to let `setup.py` install `python3-pyqt5` and `python3-pyqt5.qtserialport` using `sudo apt-get install`
