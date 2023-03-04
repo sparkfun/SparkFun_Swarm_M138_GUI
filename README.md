@@ -7,10 +7,17 @@ The Swarm M138 GUI is a simple, easy to use GUI for the Swarm M138 satellite mod
 
 If you need to install the application, see the [Installation Section](#installation) of this page.
 
-
 # Using the GUI
-  
-Click any of the pre-defined message buttons to send that message to the modem. Or enter your own message in the Message window and click Send Message to send it. The $, * and checksum are added automatically. You do not need to include those.
+
+Connect the modem to your computer using a USB-C cable.
+
+Click in the *COM Port* combo box and select the port for the modem. (It will appear as a *CH340*).
+
+Click *Open Port*.
+
+Click any of the pre-defined message buttons to send that message to the modem.
+
+You can also enter your own message in the *Message* window and click *Send Message* to send it. The $, * and checksum are added automatically. You do not need to include those.
 
 ## Installation
 
@@ -18,19 +25,16 @@ Installation binaries are available for all major platforms (macOS, Window, and 
 
 [**Swarm M138 GUI Release Page**](https://github.com/sparkfun/SparkFun_Swarm_M138_GUI/releases)
 
-Click the arrow next to **Assets** if required to see the installers:
-
-![Releases Assets](images/Assets.png)
-
+Click the arrow next to **Assets** if required to see the installers.
 
 ### Windows
-* Download the github release zip file - *SwarmM138GUI.win.zip.zip*
+* Download the [github release](https://github.com/sparkfun/SparkFun_Swarm_M138_GUI/releases) zip file - *SwarmM138GUI.win.zip*
 * Unzip the release file - *SwarmM138GUI.win.zip*
 * This results in the application executable, *SwarmM138GUI.exe*
 * Double-click *SwarmM138GUI.exe* to start the application
 
 ### macOS
-* Download the release file - *SwarmM138GUI.dmg.zip*
+* Download the [github release](https://github.com/sparkfun/SparkFun_Swarm_M138_GUI/releases) file - *SwarmM138GUI.dmg*
 * Double click on the file to unzip the file to *SwarmM138GUI.dmg*
 * Double click the *SwarmM138GUI.dmg* file to mount the disk image. 
 * A Finder window, with the contents of the file will open
@@ -46,13 +50,12 @@ To launch the GUI:
 * Once selected, macOS will present one last dialog. Select *Open* to run the application. The GUI will now start.
 
 ### Linux
-* Download the github release zip file - *SwarmM138GUI.linux.gz.zip*
+* Download the [github release](https://github.com/sparkfun/SparkFun_Swarm_M138_GUI/releases) zip file - *SwarmM138GUI.linux.gz*
 * Unzip the release file - *SwarmM138GUI.linux.gz*
 * Un-gzip the file, either by double-clicking in on the desktop, or using the `gunzip` command in a terminal window. This results in the file *SwarmM138GUI* 
 * To run the application, the file must have *execute* permission. This is performed by selecting *Properties* from the file right-click menu, and then selecting permissions. You can also change permissions using the `chmod` command in a terminal window.
 * Once the application has execute permission, you can start the application a terminal window. Change directory's to the application location and issue `./SwarmM138GUI`
 * You may need to install drivers for the CH340 USB interface chip. Full instructions can be found in our [CH340 Tutorial](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all#linux)
-
 
 ### Python Package
 The GUI is also provided as an installable Python package. This is advantageous for platforms that lack a pre-compiled application. 
