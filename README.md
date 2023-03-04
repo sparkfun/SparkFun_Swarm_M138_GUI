@@ -1,7 +1,7 @@
 SparkFun Swarm M138 GUI
 ========================================
 
-![Swarm M138 GUI](images/GUI_1.png)
+![Swarm M138 GUI](images/GUI_1.jpg)
 
 The Swarm M138 GUI is a simple, easy to use GUI for the Swarm M138 satellite modem. Available on all major platforms, as well as a Python package, the GUI will get you up and running with Swarm satellite communication. 
 
@@ -11,7 +11,7 @@ If you need to install the application, see the [Installation Section](#installa
 
 Connect the modem to your computer using a USB-C cable.
 
-Click in the *COM Port* combo box and select the port for the modem. (It will appear as a *CH340*).
+Click in the *COM Port* combo box and select the port for the modem. (The SparkFun Breakout will appear as a *CH340*).
 
 Click *Open Port*.
 
