@@ -1,1 +1,1 @@
-The Sawrm M138 GUI is a simple to use GUI for testing the Swarm M138 satellite modem.
+The Swarm M138 GUI is a simple to use GUI for testing the Swarm M138 satellite modem.

@@ -44,7 +44,7 @@ else:
     install_deps.append('pyqt5')
 
 setuptools.setup(
-    name='Sawrm_M138_GUI',
+    name='Swarm_M138_GUI',
 
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see

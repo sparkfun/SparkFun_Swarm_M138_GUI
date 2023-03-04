@@ -1,4 +1,4 @@
-SparkFun Sawrm M138 GUI
+SparkFun Swarm M138 GUI
 ========================================
 
 ![Swarm M138 GUI](images/GUI_1.png)
